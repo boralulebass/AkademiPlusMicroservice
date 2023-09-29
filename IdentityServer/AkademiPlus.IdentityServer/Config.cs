@@ -13,6 +13,8 @@ namespace AkademiPlus.IdentityServer
         public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
         {
             new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
+            new ApiResource("resource_discount"){Scopes={"discount_fullpermission"}},
+
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
         public static IEnumerable<IdentityResource> IdentityResources =>
@@ -27,6 +29,7 @@ namespace AkademiPlus.IdentityServer
             new ApiScope[]
             {
                 new ApiScope("catalog_fullpermission","Ürün listesi için tam erişim."),
+                new ApiScope("discount_fullpermission","İndirim işlemleri için tam erişim."),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -55,7 +58,12 @@ namespace AkademiPlus.IdentityServer
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "catalog_fullpermission", IdentityServerConstants.LocalApi.ScopeName, IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile },
+                    AllowedScopes = { "catalog_fullpermission", "discount_fullpermission", 
+                        IdentityServerConstants.LocalApi.ScopeName, 
+                        IdentityServerConstants.StandardScopes.Email,
+                        IdentityServerConstants.StandardScopes.OpenId, 
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.OfflineAccess},
                     AccessTokenLifetime = 3600
                 },
             };
