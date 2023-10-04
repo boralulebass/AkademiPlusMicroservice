@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroservice.Dis
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{0B750D2E-AC57-4511-B6A5-5557A4C0418C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkademiPlusMicroservice.Basket", "Basket\AkademiPlusMicroservice.Basket\AkademiPlusMicroservice.Basket.csproj", "{B4A66D45-80D9-4076-BEB1-079FC2B68893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AkademiPlusMicroservice.Basket", "Basket\AkademiPlusMicroservice.Basket\AkademiPlusMicroservice.Basket.csproj", "{B4A66D45-80D9-4076-BEB1-079FC2B68893}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{9EAABCB7-0176-4CC4-81F1-9036CA1F2FA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,6 +66,7 @@ Global
 		{FB952B8C-562A-4ECE-965F-882B0123A093} = {333B12BC-B29B-4D9E-8A61-DE2061BDB0B2}
 		{0B750D2E-AC57-4511-B6A5-5557A4C0418C} = {8EAF5195-CD22-44CB-9C7E-15B9DE8D66F6}
 		{B4A66D45-80D9-4076-BEB1-079FC2B68893} = {0B750D2E-AC57-4511-B6A5-5557A4C0418C}
+		{9EAABCB7-0176-4CC4-81F1-9036CA1F2FA9} = {8EAF5195-CD22-44CB-9C7E-15B9DE8D66F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EABB6430-3685-4E3D-A17E-D7E8F5D87717}
