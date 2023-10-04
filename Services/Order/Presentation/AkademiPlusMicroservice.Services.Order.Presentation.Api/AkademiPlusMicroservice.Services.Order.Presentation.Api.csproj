@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.22">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.22">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\IEAMicroservice.Services.Order.Infrastructure.Persistance\IEAMicroservice.Services.Order.Infrastructure.Persistance.csproj" />
+    <ProjectReference Include="..\..\..\..\Shared\AkademiPlusMicroservice.Shared\AkademiPlusMicroservice.Shared.csproj" />
+    <ProjectReference Include="..\..\Core\AkademiPlusMicroservice.Services.Order.Core.Application\AkademiPlusMicroservice.Services.Order.Core.Application.csproj" />
+    <ProjectReference Include="..\..\Core\AkademiPlusMicroservice.Services.Order.Core.Domain\AkademiPlusMicroservice.Services.Order.Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
