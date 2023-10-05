@@ -14,10 +14,10 @@ namespace AkademiPlusMicroservice.Services.Order.Core.Application.Features.CQRS.
 {
     public class GetAllOrderDetailQueryHandler : IRequestHandler<GetAllOrderDetailQueryRequest, List<ResultOrderDetailDto>>
     {
-        private readonly IRepository<OrderDetail> _repository;
+        private readonly IRepository<Domain.Entities.OrderDetail> _repository;
         private readonly IMapper _mapper;
 
-        public GetAllOrderDetailQueryHandler(IRepository<OrderDetail> repository, IMapper mapper)
+        public GetAllOrderDetailQueryHandler(IRepository<Domain.Entities.OrderDetail> repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
