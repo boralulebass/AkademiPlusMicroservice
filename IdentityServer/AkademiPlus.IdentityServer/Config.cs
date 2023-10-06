@@ -15,6 +15,7 @@ namespace AkademiPlus.IdentityServer
             new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
             new ApiResource("resource_discount"){Scopes={"discount_fullpermission"}},
             new ApiResource("resource_basket"){Scopes={"basket_fullpermission"}},
+            new ApiResource("resource_order"){Scopes={"order_fullpermission"}},
 
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
@@ -32,6 +33,7 @@ namespace AkademiPlus.IdentityServer
                 new ApiScope("catalog_fullpermission","Ürün listesi için tam erişim."),
                 new ApiScope("discount_fullpermission","İndirim işlemleri için tam erişim."),
                 new ApiScope("basket_fullpermission","Sepet işlemleri için tam erişim"),
+                new ApiScope("order_fullpermission","Sipariş işlemleri için tam erişim"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -60,7 +62,7 @@ namespace AkademiPlus.IdentityServer
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
 
                     AllowOfflineAccess = true,
-                    AllowedScopes = { "catalog_fullpermission", "discount_fullpermission","basket_fullpermission",
+                    AllowedScopes = { "catalog_fullpermission", "discount_fullpermission","basket_fullpermission","order_fullpermission",
                         IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,

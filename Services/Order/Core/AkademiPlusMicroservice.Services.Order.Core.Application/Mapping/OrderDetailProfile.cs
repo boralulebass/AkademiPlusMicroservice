@@ -14,9 +14,9 @@ namespace AkademiPlusMicroservice.Services.Order.Core.Application.Mapping
     {
         public OrderDetailProfile()
         {
-            CreateMap<ResultOrderDetailDto, OrderDetail>().ReverseMap();
-            CreateMap<CreateOrderDetailDto, OrderDetail>().ReverseMap();
-            CreateMap<UpdateOrderDetailDto, OrderDetail>().ReverseMap();
+            CreateMap<ResultOrderDetailDto, Domain.Entities.OrderDetail>().ReverseMap();
+            CreateMap<CreateOrderDetailDto, Domain.Entities.OrderDetail>().ReverseMap();
+            CreateMap<UpdateOrderDetailDto, Domain.Entities.OrderDetail>().ReverseMap();
         }
     }
 }
