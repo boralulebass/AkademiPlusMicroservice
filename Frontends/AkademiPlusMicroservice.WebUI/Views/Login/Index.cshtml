@@ -1,0 +1,29 @@
+﻿@using AkademiPlusMicroservice.WebUI.Dtos.LoginDtos;
+@model LoginDtos
+
+@{
+    Layout = null;
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <form method="post">
+                <h2>Kayıt Ol</h2>
+                <br />
+                <input class="form-input" asp-for="Username" placeholder="Kullanıcı Adınız" />
+                <br />
+                <input class="form-input" asp-for="Password" placeholder="Şifreniz" />
+                <br />
+                <button class="btn btn-primary">Kayıt Ol</button>
+                <hr />
+            </form>
+            <a href="/Register/Index" class="btn btn-info">Kayıt Ol</a>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
