@@ -1,0 +1,30 @@
+﻿@using AkademiPlusMicroservice.WebUI.Dtos.CategoryDtos
+@model List<ResultCategoryDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Kategori Adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.CategoryName</td>
+                <td><a class="btn btn-warning" href="">Sil</a></td>
+                <td><a class="btn btn-primary" href="">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="" class="btn btn-success">Yeni Kategori Girişi</a>
+</div>

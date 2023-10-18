@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Concrete\" />
+    <ProjectReference Include="..\..\Services\Catalog\AkademiPlusMicroservice.Catalog\AkademiPlusMicroservice.Catalog.csproj" />
+    <ProjectReference Include="..\..\Services\Discount\AkademiPlusMicroservice.Discount\AkademiPlusMicroservice.Discount.csproj" />
   </ItemGroup>
 
 </Project>

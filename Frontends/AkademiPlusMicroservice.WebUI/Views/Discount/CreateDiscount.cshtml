@@ -1,0 +1,19 @@
+﻿@model CreateDiscountCouponDtos
+
+@{
+    ViewData["Title"] = "CreateDiscount";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>CreateDiscount</h1>
+<div class="container">
+    <form class="form-control" method="post">
+        <label class="form-control">Kupon Adı</label>
+        <input type="text" asp-for="Code" />
+        <br />
+        <label class="form-control">Kupon Oranı</label>
+        <input type="text" asp-for="Rate" />
+        <br />
+        <button class="btn btn-success">Kupon Ekle</button>
+    </form>
+</div>
