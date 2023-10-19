@@ -1,6 +1,7 @@
 ﻿using AkademiPlusMicroservice.WebUI.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Text;
 
 namespace AkademiPlusMicroservice.WebUI.Controllers
@@ -53,12 +54,16 @@ namespace AkademiPlusMicroservice.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync($"http://localhost:5012/api/DiscountCoupons/{id}");
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<UpdateDiscountCouponDtos>(jsonData);
+            var jsonObject = JObject.Parse(jsonData);
+            var data = jsonObject["data"].ToString();
+            var values = JsonConvert.DeserializeObject<UpdateDiscountCouponDtos.Data>(data);
             return View(values);
         }
         [HttpPost]
-        public async Task<IActionResult> UpdateDiscount(UpdateDiscountCouponDtos updateDiscountCouponDtos)
+        public async Task<IActionResult> UpdateDiscount2(UpdateDiscountCouponDtos.Data updateDiscountCouponDtos)
         {
+            updateDiscountCouponDtos.UserId = "abc";
+            updateDiscountCouponDtos.CreatedDate = DateTime.Now;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateDiscountCouponDtos);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");

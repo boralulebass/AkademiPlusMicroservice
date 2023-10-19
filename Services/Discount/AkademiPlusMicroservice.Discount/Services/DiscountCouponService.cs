@@ -40,6 +40,18 @@ namespace AkademiPlusMicroservice.Discount.Services
             return Response<NoContent>.Fail("Silme işlemi yapılırken bir hata oluştu", 500);
         }
 
+        public async Task<Response<GetDiscountCouponDtos>> GetDiscountById(int id)
+        {
+            string sql = "select * from DiscountCoupons where DiscountCouponId = @discountCouponId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@discountCouponId", id);
+
+            var status = await _dbConnection.QueryFirstOrDefaultAsync<GetDiscountCouponDtos>(sql);
+
+            return Response<GetDiscountCouponDtos>.Success(_mapper.Map<GetDiscountCouponDtos>(status),200);
+
+        }
+
         public async Task<Response<List<ResultDiscountCouponDto>>> GetListAll()
         {
             var values = await _dbConnection.QueryAsync<ResultDiscountCouponDto>("select * from DiscountCoupons");

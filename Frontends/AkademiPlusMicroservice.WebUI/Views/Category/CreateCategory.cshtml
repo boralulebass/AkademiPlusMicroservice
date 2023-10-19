@@ -1,0 +1,16 @@
+﻿@using AkademiPlusMicroservice.WebUI.Dtos.CategoryDtos;
+@model CreateCategoryDto
+@{
+    ViewData["Title"] = "CreateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Kategori Ekleme</h1>
+<div class="container">
+    <form class="form-control" method="post">
+        <label class="form-control">Kategori Adı</label>
+        <input type="text" asp-for="CategoryName" />
+        <br />
+        <button class="btn btn-success">Kategori Ekle</button>
+    </form>
+</div>

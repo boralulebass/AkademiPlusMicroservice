@@ -1,5 +1,4 @@
-﻿@model CreateDiscountCouponDtos
-
+﻿@model CreateDiscountCouponDtos 
 @{
     ViewData["Title"] = "CreateDiscount";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -9,10 +8,10 @@
 <div class="container">
     <form class="form-control" method="post">
         <label class="form-control">Kupon Adı</label>
-        <input type="text" asp-for="Code" />
+        <input type="text" asp-for="Code"/>
         <br />
         <label class="form-control">Kupon Oranı</label>
-        <input type="text" asp-for="Rate" />
+        <input type="text" asp-for="Rate"/>
         <br />
         <button class="btn btn-success">Kupon Ekle</button>
     </form>

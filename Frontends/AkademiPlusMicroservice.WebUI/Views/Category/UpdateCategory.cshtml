@@ -1,0 +1,17 @@
+﻿@using AkademiPlusMicroservice.WebUI.Dtos.CategoryDtos;
+@model UpdateCategoryDto
+@{
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Kategori Güncelleme</h1>
+<div class="container">
+    <form class="form-control" method="post" asp-action="UpdateCategory2">
+        <input type="hidden" asp-for="CategoryId" />
+        <label class="form-control">Kategori Adı</label>
+        <input type="text" asp-for="CategoryName" />
+        <br />
+        <button class="btn btn-success">Kategori Güncelle</button>
+    </form>
+</div>
